@@ -19,4 +19,5 @@ public interface OfferService {
             throws ValidityNotExcepted, ParentRelationException, OfferIdDoesNotExist;
 
     public List<Offer> getOffers();
+    
 }

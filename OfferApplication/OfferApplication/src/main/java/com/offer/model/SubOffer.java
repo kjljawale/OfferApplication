@@ -3,12 +3,9 @@ package com.offer.model;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
 import org.hibernate.annotations.DynamicUpdate;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
-// import javax.validation.constraints.Size;
 import jakarta.validation.constraints.Size;
 
 @Entity

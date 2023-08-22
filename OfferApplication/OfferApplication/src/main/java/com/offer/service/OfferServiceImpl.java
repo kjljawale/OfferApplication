@@ -5,7 +5,6 @@ import com.offer.model.Offer;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.offer.exception.OfferIdDoesNotExist;
@@ -91,10 +90,10 @@ public class OfferServiceImpl implements OfferService {
         if (subOffers == null || subOffer_id < 0 || subOffer_id >= subOffers.size()) {
             return null;
         }
+
         SubOffer uSubOffer = null;
         int count = 0;
         for (SubOffer s : subOffers) {
-
             if (s.getSubOffer_id() == subOffer_id) {
                 uSubOffer = s;
                 break;

@@ -1,14 +1,11 @@
 package com.offer.controller;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.offer.exception.OfferIdDoesNotExist;
 import com.offer.exception.OfferTypeNotFound;
 import com.offer.exception.ParentRelationException;
@@ -18,7 +15,6 @@ import com.offer.model.SubOffer;
 import com.offer.repository.OfferRepository;
 import com.offer.service.OfferService;
 import com.offer.service.SubOfferService;
-
 import jakarta.validation.Valid;
 
 @RestController
@@ -56,9 +52,7 @@ public class OfferController {
         Offer updatedOffer;
         if (addSubOffer) {
             updatedOffer = offerService.addNewSubOffer(offer_id, subOffer_id, offer, addSubOffer);
-
         } else {
-
             updatedOffer = offerService.updateOffer(offer_id, subOffer_id, offer);
         }
 
@@ -67,8 +61,6 @@ public class OfferController {
         } else {
             return ResponseEntity.notFound().build();
         }
-        // return ResponseEntity.ok(updatedOffer);
-
     }
 
     @GetMapping("/getActiveOffers")

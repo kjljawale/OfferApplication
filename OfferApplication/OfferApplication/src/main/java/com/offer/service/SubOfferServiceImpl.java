@@ -14,9 +14,6 @@ public class SubOfferServiceImpl implements SubOfferService {
 
     @Override
     public SubOffer saveSubOffer(SubOffer subOffer) throws ValidityNotExcepted {
-
-
-        
         if (subOffer.getValidity() % 7 == 0) {
             return subOfferRepository.save(subOffer);
         } else
