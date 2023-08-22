@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-OfferApplication<OfferApplication>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.offer.OfferApplication",
+            "projectName": "OfferApplication",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
