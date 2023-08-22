@@ -1,6 +1,8 @@
 package com.offer.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -12,6 +14,8 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Data
 @Table(name = "sub_offers")
+@Getter
+@Setter
 @DynamicUpdate
 public class SubOffer {
 

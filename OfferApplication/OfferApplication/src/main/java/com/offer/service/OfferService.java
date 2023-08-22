@@ -10,7 +10,7 @@ import com.offer.model.Offer;
 
 public interface OfferService {
 
-    Offer saveOffer(Offer offer) throws OfferTypeNotFound;
+    Offer saveOffer(Offer offer) throws OfferTypeNotFound, ValidityNotExcepted;
 
     public Offer updateOffer(int offer_id, int subOffer_id, Offer offer)
             throws ValidityNotExcepted, ParentRelationException, OfferIdDoesNotExist;

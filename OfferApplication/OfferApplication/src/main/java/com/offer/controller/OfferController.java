@@ -47,7 +47,7 @@ public class OfferController {
         return new ResponseEntity<>(savedoffer, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{offer_id}/{subOffer_id}")
+    @PatchMapping("/{offer_id}/{subOffer_id}")
     public ResponseEntity<Offer> updateOffer(@Valid @PathVariable int offer_id,
             @PathVariable int subOffer_id,
             @RequestBody Offer offer,
@@ -58,10 +58,16 @@ public class OfferController {
             updatedOffer = offerService.addNewSubOffer(offer_id, subOffer_id, offer, addSubOffer);
 
         } else {
+
             updatedOffer = offerService.updateOffer(offer_id, subOffer_id, offer);
         }
 
-        return ResponseEntity.ok(updatedOffer);
+        if (updatedOffer != null) {
+            return ResponseEntity.ok(updatedOffer);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+        // return ResponseEntity.ok(updatedOffer);
 
     }
 
